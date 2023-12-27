@@ -13,7 +13,7 @@ def match(match_id):
         return "Invalid match id", 404
 
     start = time.time()
-    msg = "Match found" if (is_match(*MATCHES[match_id])) else "No match"
+    msg = "No match" if (is_match(*MATCHES[match_id])) else "Match found"
     end = time.time()
 
     return {"message": msg, "elapsedTime": end - start}, 200
